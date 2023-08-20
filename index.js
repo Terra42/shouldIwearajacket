@@ -20,9 +20,13 @@ app.get("/", (req, res) => {
 
 app.post("/", async (req, res) => {
     const city = req.body.city;
-    const result = await axios.get(API_URL + city, config);
-    const answer = getAnswer(result.data.temp);
-    res.render("index.ejs", {result: answer});
+    try {
+        const result = await axios.get(API_URL + city, config);
+        const answer = getAnswer(result.data.temp);
+        res.render("index.ejs", {result: answer});
+      } catch (error) {
+        res.render("index.ejs", { result: error});
+      }
 })
 
 app.listen(PORT, () => {

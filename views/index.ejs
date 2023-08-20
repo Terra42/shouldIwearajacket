@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Should I wear a jacket?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>Should I wear a jacket today?</h1>
-    
-    <form action="/" method="POST">
-        <input type="text" name="city" id="city" placeholder="Input city...">
-        <input type="submit" value="Show me">
-    </form>
 
-    <div class="result">
-        <% if (locals.result) { %>
-            <p><%= result %></p>
-        <% } else { %>
-             <p>I don't know yet, please tell me where you live 😊</p>
-        <% } %>
+    <div class="content">
+        <form action="/" method="POST">
+            <input class="input" type="text" name="city" id="city" placeholder="Choose a city">
+            <input class="submit" type="submit" value="Show me">
+        </form>
 
-        
+        <div class="result">
+            <% if (locals.result) { %>
+                <p><%= result %></p>
+            <% } else { %>
+                <p>I don't know yet, please tell me where you live 😊</p>
+            <% } %>
+        </div>
     </div>
 </body>
 </html>
