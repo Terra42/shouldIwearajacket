@@ -8,9 +8,20 @@
 </head>
 <body>
     <h1>Should I wear a jacket today?</h1>
-    <form action="/submit" method="POST">
+    
+    <form action="/" method="POST">
         <input type="text" name="city" id="city" placeholder="Input city...">
         <input type="submit" value="Show me">
     </form>
+
+    <div class="result">
+        <% if (locals.result) { %>
+            <p><%= result %></p>
+        <% } else { %>
+             <p>I don't know yet, please tell me where you live 😊</p>
+        <% } %>
+
+        
+    </div>
 </body>
 </html>
