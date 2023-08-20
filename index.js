@@ -23,7 +23,7 @@ app.post("/", async (req, res) => {
     try {
         const result = await axios.get(API_URL + city, config);
         const answer = getAnswer(result.data.temp);
-        res.render("index.ejs", {result: answer});
+        res.render("index.ejs", {result: {answer:answer, city:city}});
       } catch (error) {
         res.render("index.ejs", { result: error});
       }

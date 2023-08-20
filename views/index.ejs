@@ -21,7 +21,8 @@
 
         <div class="result">
             <% if (locals.result) { %>
-                <p><%= result %></p>
+                <h3><%= result.city %>:</h3>
+                <p><%= result.answer %></p>
             <% } else { %>
                 <p>I don't know yet, please tell me where you live 😊</p>
             <% } %>
