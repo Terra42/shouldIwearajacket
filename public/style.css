@@ -64,3 +64,21 @@
     border-radius: 10px;
     font-size: 1.2rem;
   }
+
+  @media screen and (min-width: 700px) {
+    h1{
+        font-size: 3rem;
+    }
+
+    .content{
+        width: 30rem;
+    }
+
+    .result{
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+  }
